@@ -6,6 +6,7 @@ from django.contrib.auth.models import Group
 from django.contrib.auth.decorators import login_required,user_passes_test
 from django.contrib import messages
 from django.conf import settings
+from django.contrib.auth.models import User
 
 def home_view(request):
     products=models.Product.objects.all()
@@ -399,7 +400,8 @@ def payment_success_view(request):
     # we will fetch product id from cookies then respective details from db
     # then we will create order objects and store in db
     # after that we will delete cookies because after order placed...cart should be empty
-    customer=models.Customer.objects.get(user_id=request.user.id)
+    usuario=models.User.objects.get(id=request.user.id)
+    customer=models.Customer.objects.get(user=usuario)
     products=None
     email=None
     mobile=None
