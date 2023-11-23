@@ -3,7 +3,6 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Simple E-commerce</title>
     <style media="screen">
       body {
     margin: 0;
@@ -88,8 +87,8 @@ background: linear-gradient(to bottom, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, 
                     {% csrf_token %}
                     <h1>Login do adm</h1>
                    
-                     {% render_field form.username class="form-control" placeholder="Username" autocomplete="off" %}
-                     {% render_field form.password class="form-control" placeholder="Password" %}
+                     {% render_field form.username class="form-control" placeholder="Usuário" autocomplete="off" %}
+                     {% render_field form.password class="form-control" placeholder="Senha" %}
 
                      <input type="submit" name="" value="Login">
 
