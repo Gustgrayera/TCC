@@ -18,18 +18,6 @@
   margin: 0 auto;
 }
 
-.btn-view-orders{
-  display: block;
-  border:1px solid #47c7c5;
-  width:100px;
-  margin: 0 auto;
-  margin-top: 45px;
-  padding: 10px;
-  color:#fff;
-  background-color:#47c7c5;
-  text-decoration: none;
-  margin-bottom: 20px;
-}
 h2{
   color:#0014ff;
     margin-top: 25px;
@@ -39,14 +27,26 @@ a{
   text-decoration: none;
 }
 </style>
-<div class="success-page" style="top:auto;">
-   <img  src="http://share.ashiknesin.com/green-checkmark.png" class="center" alt="" />
-  <h2>Pedido bem sucedido!</h2>
-  <p>Entre em contato com o vendedor para o pagamento</p>
-  <a style="text-decoration:none;" href="https://api.whatsapp.com/send/?phone=558488625199&text&type=phone_number&app_absent=0">Entrar em contato com o vendedor</a>
-  <a style="text-decoration:none;" href="/my-order" class="btn-view-orders">Ver pedidos</a>
-  <a style="text-decoration:none;" href="/customer-home">Continue comprando</a>
+
+<div class="container mt-4">
+  <div class="row">
+    <center><h2>Pedido bem sucedido!</h2></center>
+      <p>Entre em contato com o vendedor para o pagamento</p>
+      <div class="col-md-4">
+          <a href="https://api.whatsapp.com/send/?phone=558488625199&text&type=phone_number&app_absent=0" class="btn btn-success btn-block mb-3">Entrar em contato com o vendedor</a>
+      </div>
+      <div class="col-md-4">
+          <a href="/my-order" class="btn btn-info btn-block mb-3">Ver pedidos</a>
+      </div>
+      <div class="col-md-4">
+          <a href="/customer-home" class="btn btn-warning btn-block mb-3">Continuar comprando</a>
+      </div>
+  </div>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <br><br><br><br>
 <br><br><br><br>
 {% endblock content %}
